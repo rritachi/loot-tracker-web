@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loot Tracker | Level Up Your Finances</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --primary-gold: #ffca28;
+            --hp-red: #ff5252;
+            --xp-blue: #448aff;
+            --text-main: #e6edf3;
+            --text-dim: #8b949e;
+            --accent-green: #4caf50;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* --- Header --- */
+        header {
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 1px solid #30363d;
+        }
+
+        .logo {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.5rem;
+            color: var(--primary-gold);
+            text-shadow: 2px 2px #000;
+            margin-bottom: 10px;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            max-width: 1000px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, #ffca28, #f4ff81);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-dim);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        /* --- Character Stats Mockup --- */
+        .stats-preview {
+            background: var(--card-bg);
+            border: 2px solid #30363d;
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 500px;
+            margin: 0 auto 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .stat-bar {
+            background: #000;
+            height: 20px;
+            border-radius: 10px;
+            margin: 10px 0 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hp-fill { width: 75%; background: var(--hp-red); height: 100%; transition: width 0.5s; }
+        .xp-fill { width: 45%; background: var(--xp-blue); height: 100%; transition: width 0.5s; }
+
+        .stat-label {
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.7rem;
+        }
+
+        /* --- Features --- */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            border-top: 4px solid var(--primary-gold);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+            color: var(--primary-gold);
+        }
+
+        /* --- CTA --- */
+        .cta-section {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: linear-gradient(rgba(13,17,23,0), rgba(255, 202, 40, 0.05));
+        }
+
+        .btn {
+            background-color: var(--primary-gold);
+            color: #000;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            border-top: 1px solid #30363d;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">LOOT TRACKER</div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Level up your finances.</h1>
+            <p>
+                Loot Tracker is the RPG-inspired money tracker that turns budgeting into a rewarding adventure.
+                Track your wealth, fight debt, and grow your character—all stored locally on your device with no account required.
+            </p>
+
+            <div class="stats-preview">
+                <div class="stat-label">
+                    <span>HEALTH (Budget)</span>
+                    <span>75/100 HP</span>
+                </div>
+                <div class="stat-bar"><div class="hp-fill"></div></div>
+
+                <div class="stat-label">
+                    <span>EXPERIENCE (Income)</span>
+                    <span>Level 12</span>
+                </div>
+                <div class="stat-bar"><div class="xp-fill"></div></div>
+                <p style="font-size: 0.8rem; color: var(--accent-green);">+ 250 Loot found today!</p>
+            </div>
+
+            <a href="#" class="btn">Start Your Quest</a>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <h3>Gain XP</h3>
+                <p>Earn experience points every time you record income. Watch your character level up as your net worth grows.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Combat Damage</h3>
+                <p>Spending money takes health away. Stay within your limits to survive the monthly financial battles and avoid a "Game Over."</p>
+            </div>
+            <div class="feature-card">
+                <h3>Quest Logs</h3>
+                <p>Review your yearly spending habits and bill history like a quest log. See exactly where your gold is going.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Privacy Shield</h3>
+                <p>Your loot stays in your inventory. No accounts, no servers, and zero data tracking. Everything is stored locally on your device.</p>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Ready to face the boss?</h2>
+            <p>Conquer your bills and secure your financial future today.</p>
+            <br>
+            <a href="#" class="btn">Download Loot Tracker</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FRMZ Game. <a href="privacy.html">Privacy Policy</a></p>
+    </footer>
+
+</body>
+</html>
